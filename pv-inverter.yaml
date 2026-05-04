@@ -23,9 +23,9 @@ substitutions:
 
   # Safe Mode parameters for supported inverters
   safe_mode_delay: 600s # Time after which transition to safe mode and setting default operating parameters will occur
-  default_maximum_battery_charge_current: "140" # Amps
+  default_maximum_battery_charge_current: "280" # Amps
   default_max_sell_power: "12000" # Watts. Adjust to your inverter
-  default_system_work_mode: "Zero Export To Load" # "Selling First", "Zero Export To Load", "Zero Export To CT"
+  default_system_work_mode: "Zero Export To CT" # "Selling First", "Zero Export To Load", "Zero Export To Load"
   default_solar_sell: "on" # "on", "off"
   default_force_off_grid: "off" # "on", "off"
 
@@ -43,14 +43,14 @@ packages:
 
 # Set appropriately if using a different board. https://esphome.io/components/#supported-microcontrollers
 esp32:
-  board: esp32dev
+  board: esp32-s3-devkitc-1
   framework:
     type: esp-idf
 
 uart:
   # Default TX and RX pins, if TTL converter is connected differently, set appropriate pins
   tx_pin: GPIO17
-  rx_pin: GPIO16
+  rx_pin: GPIO18
 
 modbus:
 #  flow_control_pin: GPIO4 # Uncomment and set appropriate pin if your TTL converter requires it
