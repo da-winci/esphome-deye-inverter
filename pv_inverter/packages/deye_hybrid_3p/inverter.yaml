@@ -31,6 +31,7 @@ sensor:
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
     name: "AC Temperature"
+    id: deye_ac-temp
     register_type: holding
     address: 541
     unit_of_measurement: "°C"
