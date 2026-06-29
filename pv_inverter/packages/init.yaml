@@ -117,7 +117,7 @@ sensor:
       entity_category: diagnostic
 
 text_sensor:
-  - platform: wifi_info
+  - platform: ethernet_info
     ip_address:
       name: ESP IP Address
       id: esp_ip_address
